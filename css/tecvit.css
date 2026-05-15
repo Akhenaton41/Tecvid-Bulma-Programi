@@ -1,0 +1,378 @@
+*{scroll-behavior: smooth;}
+
+body{
+
+	background: #dde1e7;
+	}
+
+h1,h2,h3,h4{
+	text-shadow: 1px 1px 3px #666;
+	font-family:arial,sans-serif;
+	}
+
+h4{color:blue;}
+
+.logo *{
+	margin:2px;
+	}
+
+.logo{
+	width:99%;
+	border-radius: 5px;
+	box-shadow: inset -3px -3px 7px #ffffffb0, inset 3px 3px 5px rgba(94, 104, 121, 0.692);
+	padding: 5px;
+	text-align:center;
+	margin-bottom:10px;
+	}
+
+.sureAdi,fieldset *,#sonucAlani p{
+	font: 16px arial,sans-serif;
+	color: #666;
+	text-shadow: 0 1px 0 #fff;
+	}
+
+.Arapca{
+	font-family: 'Amiri', serif !important;
+	font-size:20px ;
+	text-shadow: 1px 1px 3px #666;
+	}
+
+.sureAdi{
+	width:100%;
+	height:52px;
+	border: 0px solid rgba(0,0,0,0.2);
+	border-radius: 8px;
+	padding:5px;
+	padding-inline-start: 10px;
+	box-shadow: inset -3px -3px 7px #ffffffb0, inset 3px 3px 5px rgba(94, 104, 121, 0.692);
+	background:#fff;
+	
+	cursor: text;
+	display: flex;
+	align-items: center;
+	}
+
+.sureAdi input{
+	text-transform: capitalize;
+	margin-left:10px;
+	}
+
+
+
+.ayet{
+	width:99%;
+	
+	border: 0px solid rgba(0,0,0,0.2);
+	box-shadow: inset -3px -3px 7px #ffffffb0, inset 3px 3px 5px rgba(94, 104, 121, 0.692);
+	background:#fff;
+	
+	}
+	
+.ayet textarea{
+
+	min-height:50px;
+	max-height:400px;
+
+	margin:1%;
+	
+	resize: none;
+	overflow: auto;
+	
+	transition: background 0.6s;
+	
+	font-family: 'Amiri Quran', serif;
+	font-size: 1.75em;
+	line-height: 2.35em;
+	direction: rtl;
+	text-align: justify;
+	}
+
+.sureAdi input,.ayet textarea{
+	width:98%;
+	border-color: transparent;
+	background: transparent;
+	color: rgba(0,0,0,.87);
+	outline: none;
+	word-wrap: break-word;
+	}
+
+.ayet textarea::placeholder, .ayet textarea::-webkit-input-placeholder,.ayet textarea:-moz-placeholder, .ayet textarea::-moz-placeholder{	
+	text-align: center;
+	}
+
+legend{font-weight: bold;}
+
+.buton {
+	margin: 6px;
+	padding: 0.6em 1.8em;
+	border-width: 1px;
+	border-color: #cdd5df;
+	border-style: solid;
+	border-radius: 1.21em;
+	
+	vertical-align: bottom;
+	cursor: pointer;
+	font-family: "Booster Next FY", "Avenir Next", Avenir, sans-serif;
+	font-size:20px;
+	line-height: 1.42;
+	user-select: none;
+	vertical-align: bottom;
+	position: relative;
+	width:260px;
+	
+	
+	border: 0px solid rgba(0,0,0,0.2);
+	
+	box-shadow: inset -3px -3px 7px #ffffffb0, inset 3px 3px 5px rgba(94, 104, 121, 0.692);
+	white-space: nowrap;
+	}
+	
+.buton span{
+	font-size:12px;
+	}
+
+.Tecvitli{
+	border-collapse: collapse;
+	border:1px double #000;
+	table-layout: fixed;
+	opacity:0.9;
+	
+	}
+	
+.Tecvitli tr td{
+	text-align:center;
+	vertical-align:middle;
+	min-width:100px;
+	padding:15px;
+	
+	border:2px solid #666;
+	color:#000;
+	box-shadow: inset -1px -1px 7px #ffffffb0, inset 1px 1px 5px rgba(94, 104, 121, 0.692);
+	}
+	
+.Tecvitli tr td span{
+	color:red;
+	}
+
+.empty{
+	 border-right: hidden !important;
+	 border-bottom: hidden !important;
+	 
+	box-shadow:none !important;
+	
+	}
+
+p .Arapca{
+	text-shadow:none;
+	}
+
+
+
+.autocomplete {
+  position: relative;
+  width:50%;
+  padding:0;
+  display: inline-block;
+}
+
+.autocomplete-items {
+  position: absolute;
+  margin-top:-5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+  
+  width:calc(103% - 2px);
+  max-height:300px;
+  overflow-y: auto;
+  overflow-x:hidden;
+  
+}
+
+.autocomplete-items div {
+	width:calc(100% - 3px);
+	margin-left:-1px;
+	
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+.autocomplete-items div:hover {
+  background-color: #e9e9e9; 
+}
+
+.autocomplete-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff;}
+
+
+
+.form-control {
+  display: inline-block;
+
+	}
+	
+
+#sonucAlani{
+	border-radius: 5px;
+	box-shadow: inset -3px -3px 7px #ffffffb0, inset 3px 3px 5px rgba(94, 104, 121, 0.692);	
+	padding:10px 20px;
+	background:#fff;
+	display:none;
+	}
+	
+.onBilgi {
+  background: #f4f4f4;
+  padding:10px;
+  box-shadow: 3px 3px 6px #bebebe, -3px -3px 6px #ffffff;
+  text-shadow: 0 1px 0 #fff !important;
+}
+
+.Okunus{
+	font-size:18px !important;
+	font-family:Arial !important;
+	font-weight: bold !important;
+	color:#000 !important;
+	text-shadow:1px 1px 3px #666 !important;
+	margin:8px -3px -1px -3px;
+	
+	padding:0px;
+	}
+
+.transliteration{
+	font: 18px arial,sans-serif !important;
+	text-shadow:1px 1px 3px #666 !important;
+	color:#666 !important;
+	}
+	
+#Kuran,#Anlam{
+	
+	box-shadow:0 4px 8px 0 rgba(0,0,0,.2),0 6px 16px 0 rgba(0,0,0,.19);
+	padding:0;
+	}
+
+#Kuran{
+	width:100%;
+	position:relative;
+	
+	background:#fff;	
+	
+	background-image:url("");
+	background-size:100% 100%;
+	
+	margin-top:20px;
+	margin-bottom:14px;
+	
+	height:400px;
+	}
+
+div[id^="Ayet"]{
+	padding:0 2% 0 0;
+	
+	}
+
+.Aktif{
+	filter: invert(13%) sepia(74%) saturate(6791%) hue-rotate(359deg) brightness(104%) contrast(114%);
+	}
+
+#KuranText{
+	width:100%;
+	height:84%;
+	overflow-y:auto;
+	margin:0;
+	padding:3% 0 3% 0;
+	}
+	
+#KuranText div img{
+	filter: none;
+	}
+
+#sonucAlani audio{
+	width:100%;
+	}
+
+#Anlam{
+	width:96%;
+	background: #008000 radial-gradient( circle, #00DD00 0%, #008000 80%) center center / cover no-repeat;
+	height:200px;
+	
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  color:#fff;
+  font-size:30px;
+  text-shadow: 1px 1px 5px #666;
+  overflow:auto;
+  padding-left:2%;
+  padding-right:2%;
+	}
+
+#Meal label{
+	word-break: keep-all; !important;
+	white-space: nowrap;
+	}
+
+.loading:after {
+  content: '.';
+  animation: dots 1s steps(5, end) infinite}
+
+@keyframes dots {
+	0% {content: '.  ';}
+	25% {content: '.. ';}
+	50% {content: '...';}
+	75% {content: '   ';}
+  }
+
+.analiz{
+	border-collapse: collapse;
+	table-layout: fixed;
+	width:75%;
+	}
+
+.analiz tr td{
+	text-align: center;
+	font-size:18px;
+	border:1px solid #666;
+	color:#000;
+	text-shadow: 0 1px 0 #fff !important;
+	}
+
+.analiz tr:first-child td{
+	font-weight: bold;
+	font-family:Arial;
+	color:#000 !important;
+	}
+
+.analiz tr td:nth-child(2),.analiz tr td:nth-child(3),.analiz tr td:nth-child(5),.ayarlarMenusu tr td{
+	font-family:Arial;
+	}
+
+.analiz tr td:nth-child(1){color:#000 !important;]
+
+a.Arapca{
+	font-size:20px;
+	}
+
+.ayarlarMenusu tr td select{width:100%;}
+
+select{
+	font: 14px arial,sans-serif;
+	color: #000;
+	text-shadow: 0 1px 0 #fff;
+	}
+	
+,#sonucAlani table tr td{
+	font: 16px arial,sans-serif;
+
+	text-shadow: 0 1px 0 #fff;
+	}
