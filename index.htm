@@ -183,7 +183,7 @@ function ayetGetir() {
     };
 
     // API'den veri çekme
-    xmlhttp.open("GET", "http://api.alquran.cloud/v1/surah/" + sureNo + "/ar", true);
+    xmlhttp.open("GET", "https://api.alquran.cloud/v1/surah/" + sureNo + "/ar", true);
     xmlhttp.send();
 }
 
@@ -217,7 +217,7 @@ function turkceOkunusBul() {
 
             parts.push("<h2>Üstteki Ayetlerin Okunuşları</h2>");
             parts.push("<h3>A. Muhammed Abay Transliterasyonu</h3>");
-            parts.push(`<p class='onBilgi'>bknz. <a target='_blank' style='color:#000' href='http://api.alquran.cloud/v1/surah/${sureNo}/editions/tr.transliteration'>http://api.alquran.cloud</a></p>`);
+            parts.push(`<p class='onBilgi'>bknz. <a target='_blank' style='color:#000' href='https://api.alquran.cloud/v1/surah/${sureNo}/editions/tr.transliteration'>https://api.alquran.cloud</a></p>`);
             parts.push("<p>");
 
             const myObj = JSON.parse(this.responseText);
@@ -241,7 +241,7 @@ function turkceOkunusBul() {
             parts.push("</p>");
 
             parts.push("<h3>D. İngilizce Transliterasyon</h3>");
-            parts.push(`<p class='onBilgi'>bknz. <a target='_blank' style='color:#000' href='http://api.alquran.cloud/v1/surah/${sureNo}/editions/en.transliteration'>http://api.alquran.cloud</a></p>`);
+            parts.push(`<p class='onBilgi'>bknz. <a target='_blank' style='color:#000' href='https://api.alquran.cloud/v1/surah/${sureNo}/editions/en.transliteration'>https://api.alquran.cloud</a></p>`);
             parts.push("<p>");
 
             for (let i = bas - 1; i <= son - 1; i++) {
@@ -271,7 +271,7 @@ function turkceOkunusBul() {
         }
     };
 
-    xmlhttp.open("GET", `http://api.alquran.cloud/v1/surah/${sureNo}/editions/tr.transliteration,en.transliteration`, true);
+    xmlhttp.open("GET", `https://api.alquran.cloud/v1/surah/${sureNo}/editions/tr.transliteration,en.transliteration`, true);
     xmlhttp.send();
 	}
 
@@ -333,7 +333,7 @@ function tecvitliDinle() {
         }
     };
 
-    xmlhttp.open("GET", "http://api.alquran.cloud/v1/edition?format=audio&language=ar&type=versebyverse", true);
+    xmlhttp.open("GET", "https://api.alquran.cloud/v1/edition?format=audio&language=ar&type=versebyverse", true);
     xmlhttp.send();
 }
 
@@ -359,7 +359,7 @@ function yeniKiraat() {
     const ayetParts = []; // Ayetleri tutacak dizi
 
     for (let i = bas; i <= son; i++) {
-        ayetParts.push(`<div id='Ayet${i}' onclick='ayetDegistir(this)'><img src='http://cdn.islamic.network/quran/images/high-resolution/${sureNo}_${i}.png' width='100%'></div>`);
+        ayetParts.push(`<div id='Ayet${i}' onclick='ayetDegistir(this)'><img src='https://cdn.islamic.network/quran/images/high-resolution/${sureNo}_${i}.png' width='100%'></div>`);
     }
 
     id("KuranText").innerHTML = ayetParts.join(""); // Ayet parçalarını birleştir
