@@ -25,7 +25,11 @@
 <div class="autocomplete">
 	<div class="sureAdi">
 		<img src="images/kuran.png" height="32">
-		<input id="sureAdi" type="text" placeholder="örnek: Fatiha 1-3 ya da 1:1-3" onchange="ayetGetir()" onfocus="">
+		<input id="sureAdi" type="text" 
+       placeholder="örnek: Fatiha 1-3 ya da 1:1-3" 
+       onkeydown="if(event.key === 'Enter') ayetGetir()"
+       onchange="ayetGetir()" 
+       onfocus="">
 	</div>
 </div>
 
