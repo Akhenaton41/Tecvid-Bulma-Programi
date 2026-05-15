@@ -1,4 +1,4 @@
-﻿var acikKuran = [];
+var acikKuran = [];
 var acikKuranSira;
 
 function mealBul() {
