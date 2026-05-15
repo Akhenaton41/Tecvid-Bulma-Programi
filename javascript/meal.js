@@ -81,6 +81,6 @@ function mealBul() {
         }
     };
 
-    xmlhttp.open("GET", "http://api.alquran.cloud/v1/surah/" + sureNo + "/editions/tr.ates,tr.bulac,tr.diyanet,tr.golpinarli,tr.ozturk,tr.vakfi,tr.yazir,tr.yildirim,tr.yuksel", true);
+    xmlhttp.open("GET", "https://api.alquran.cloud/v1/surah/" + sureNo + "/editions/tr.ates,tr.bulac,tr.diyanet,tr.golpinarli,tr.ozturk,tr.vakfi,tr.yazir,tr.yildirim,tr.yuksel", true);
     xmlhttp.send();
 }
