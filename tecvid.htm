@@ -1,0 +1,603 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="javascript/autocomplate.js"></script>
+<script src="javascript/tecvit.js"></script>
+<script src="javascript/meal.js"></script>
+<script src="javascript/IO.js"></script>
+<link rel="stylesheet" type="text/css" href="css/tecvit.css">
+<title>Tecvid</title>
+</head>
+
+<body>
+<div class="logo"><h1>Tecvid Bulma Programı</h1><h2>Programcı: Mehmet Akif Ardıç (Akhenaton)</h2><h3>Sürüm: 1.0</h3></div>
+<div id="container">
+
+<fieldset><legend>Bir Hadis</legend><blockquote><p><i>“Sizin en hayırlınız, Kur'an'ı öğrenen ve öğretendir.” (Hz. Muhammed (s.a.v.)</i></p></blockquote></fieldset><br>
+
+
+<fieldset><legend>Ayet Bölümü</legend>
+
+<p>Aşağıdaki kutuya sûre adını ve ayet numaralarını yaz:</p>
+
+<div class="autocomplete">
+	<div class="sureAdi">
+		<img src="images/kuran.png" height="32">
+		<input id="sureAdi" type="text" placeholder="örnek: Fatiha 1-3 ya da 1:1-3" onchange="ayetGetir()" onfocus="">
+	</div>
+</div>
+
+<p>ya da alttaki kutuya tecvit kurallarını kontrol etmek istediğin ayetleri kendin <b>Arapça ve harekeli olarak</b> yapıştır.</p>
+
+
+<div class="ayet"><textarea id="Ayet" placeholder="Buraya bir ayet ya da ayetler yapıştır" cols="100" rows="10" name="ayet"></textarea></div></div>
+
+</fieldset>
+
+<br><fieldset><legend>Bulunacak Tecvidler</legend>
+<p>	
+
+	<input type="checkbox" id="kural3" name="kural3" value="ON" checked> Medd-i Tabiî   
+	<input type="checkbox" id="kural10" name="kural10" value="ON" checked> Medd-i Ârız 
+	<input type="checkbox" id="kural7" name="kural7" value="ON" checked> Medd-i Munfasıl 
+	<input type="checkbox" id="kural8" name="kural8" value="ON" checked> Medd-i Muttasaıl 
+	<input type="checkbox" id="kural11" name="kural11" value="ON" checked> Medd-i Lîn 
+	<input type="checkbox" id="kural5" name="kural5" value="ON" checked> İdğam 
+	<input type="checkbox" id="kural6" name="kural6" value="ON" checked> İzhâr 
+	<input type="checkbox" id="kural12" name="kural12" value="ON" checked> İhfâ 
+	<input type="checkbox" id="kural1" name="kural1" value="ON" checked> İklâb 
+	<input type="checkbox" id="kural2" name="kural2" value="ON" checked> Kalkale 
+</p>
+</fieldset>
+
+<br><fieldset><legend>Meal Ayarları</legend>
+<p id="Meal">
+	<label><input type="checkbox" id="meal0" name="meal0" value="ON" checked> Abdulbakî Gölpınarlı</label> 
+	<label><input type="checkbox" id="meal1" name="meal1" value="ON" checked> Ahmed Hulusi</label> 
+	<label><input type="checkbox" id="meal2" name="meal2" value="ON" checked> Ali Bulaç</label> 
+	<label><input type="checkbox" id="meal3" name="meal3" value="ON" checked> Ali Rıza Safa</label> 
+	<label><input type="checkbox" id="meal4" name="meal4" value="ON" checked> Bayraktar Bayraklı</label> 
+	<label><input type="checkbox" id="meal5" name="meal5" value="ON" checked> Diyanet İşleri</label> 
+	<label><input type="checkbox" id="meal6" name="meal6" value="ON" checked> Diyanet Vakfı</label> 
+	<label><input type="checkbox" id="meal8" name="meal8" value="ON" checked> Edip Yüksel</label> 
+	<label><input type="checkbox" id="meal7" name="meal7" value="ON" checked> Edip Yüksel (Eski Baskı)</label> 
+	<label><input type="checkbox" id="meal10" name="meal10" value="ON" checked> Elmalılı Hamdi Yazır</label> 
+	<label><input type="checkbox" id="meal9" name="meal9" value="ON" checked> Elmalılı Hamdi Yazır (sadeleştirilmiş)</label> 
+	<label><input type="checkbox" id="meal11" name="meal11" value="ON" checked> Erhan Aktaş (Eski Baskı)</label> 
+	<label><input type="checkbox" id="meal12" name="meal12" value="ON" checked> Erhan Aktaş (Yeni Baskı)</label> 
+	<label><input type="checkbox" id="meal13" name="meal13" value="ON" checked> Gültekin Onan</label> 
+	<label><input type="checkbox" id="meal14" name="meal14" value="ON" checked> Hasan Basri Çantay</label> 
+	<label><input type="checkbox" id="meal15" name="meal15" value="ON" checked> İbni Kesir</label> 
+	<label><input type="checkbox" id="meal16" name="meal16" value="ON" checked> Mehmet Okuyan</label> 
+	<label><input type="checkbox" id="meal17" name="meal17" value="ON" checked> Muhammed Esed</label> 
+	<label><input type="checkbox" id="meal18" name="meal18" value="ON" checked> Mustafa İslamoğlu</label> 
+	<label><input type="checkbox" id="meal19" name="meal19" value="ON" checked> Suat Yıldırım</label>
+	<label><input type="checkbox" id="meal20" name="meal20" value="ON" checked> Süleyman Ateş</label> 
+	<label><input type="checkbox" id="meal21" name="meal21" value="ON" checked> Süleymaniye Vakfı</label> 
+	<label><input type="checkbox" id="meal22" name="meal22" value="ON" checked> Şaban Piriş</label> 
+	<label><input type="checkbox" id="meal23" name="meal23" value="ON" checked> Yaşar Nuri Öztürk</label> 
+</p>
+</fieldset>
+
+<p>
+	<button class="buton" onclick="tecvitBul()"><span>Yukarıdaki âyetlerin;</span><br>Tecvit Kurallarını Bul</button> 
+	<button class="buton" onclick="turkceOkunusBul()"><span>Yukarıdaki âyetlerin;</span><br>Okunuşlarını Bul</button>
+	<button class="buton" onclick="mealBul()"><span>Yukarıdaki âyetlerin;</span><br>Anlamlarını Bul</button> 
+	<button class="buton" onclick="kelimeKokAnalizi()"><span>Yukarıdaki âyetlere;</span><br>Kelime/Kök Analizi Yap</button>
+		<button class="buton" onclick="alert('Bu modül, Akhenaton tarafından henüz yazılmamıştır.')"><span>Yukarıdaki âyetleri tecvitli olarak</span><br>Mikrofonda Test Et</button>
+	<button class="buton" onclick="tecvitliDinle()"><span>Yukarıdaki âyetleri;</span><br>Tecvitli Olarak Dinle</button>
+	<button class="buton" onclick="ayetAlaniniTemizle()"><span>Yukarıdaki âyet alanını</span><br>Temizle</button>
+</p>
+
+<div id="sonucAlani"></div><br>
+<div id="gizliDiv" style="display:none"></div>
+
+<script>
+
+var baslikNo,Ayet$,eskiDeger,demo=true,sureNo,bas,son,okumaSirasi,mp3ler,gecisSuresi=10000,notlar=[]
+
+let mealler = [];
+
+function baslangic() {
+    sureler.sort();
+    autocomplete(id("sureAdi"), sureler);
+
+    const checkboxlar = document.querySelectorAll('input[type=checkbox]');
+    const mealCheckboxlar = [5, 10, 14, 15, 17];
+    
+    checkboxlar.forEach(checkbox => {
+        const id = checkbox.id;
+        checkbox.checked = id.includes("kural") || (id.includes("meal") && mealCheckboxlar.includes(parseInt(id.replace("meal", ""), 10)));
+    	});
+
+    if (demo) {
+        id("sureAdi").value = "furkan 30";
+        ayetGetir();
+    } else {
+        id("sureAdi").value = "";
+        id("Ayet").value = "";
+    	}
+	}
+
+function okunusRutus(ok) {
+    // 4 kez okunusBul fonksiyonunu çalıştırma
+    for (let p = 0; p < 4; p++) {
+        ok = okunusBul(ok);
+    	}
+
+    // Birden fazla replace işleminde zincirleme ve gereksiz tekrarları kaldırma
+    ok = ok
+        .replace(/آ/g, "ê")
+        .replace(/ûا/g, "û")
+        .replace(/ا|ل/g, "")
+        .replace(/e[ʿğ]([dlm])/i, "ağ$1")
+        .replace(/i llehi/g, "illêhi")
+        .replace(/leg/g, "lag")
+        .replace(/(.)aleyê /g, "$1alê ")
+        .replace(/ êْd/g, "eyd")
+        .replace(/e([ḥ])/g, "a$1")
+        .replace(/i([ḥ])/g, "ı$1")
+        .replace(/ ilâ l /i, " ilel ")
+        .replace(/ [ۚۚۖ]/g, ". ")
+        .replace(/ ([l]) /g, "$1 ")
+        .replace(/ ([bcdfghḥlmnrsştvyz])([bcdfgḥhlmnrsştvyzʿ])/g, "$1-$2");
+
+    // Kelime bazında son üç karakter kontrolü ve dönüştürme
+    ok = ok.split(" ").map(word => {
+        if (word.endsWith("ihi")) return word.slice(0, -3) + "ihî";
+        if (word.endsWith("ehu")) return word.slice(0, -3) + "ehû";
+        return word;
+    	});
+
+    return ok.join(" ");
+	}
+
+function ayetGetir() {
+    ayetTespit();
+    
+    // XMLHTTPRequest oluşturma
+    const xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+            const myObj = JSON.parse(this.responseText);
+            let ar$ = "";
+
+            // Ayetleri birleştirme
+            for (let i = bas - 1; i < son; i++) {
+                ar$ += myObj["data"]["ayahs"][i].text + "&#64831;" + arabicNumber(i + 1) + "&#64830;";
+            }
+
+            // Eğer ayetler varsa, gizli div'e ekleyip, metni Ayet inputuna aktar
+            if (ar$) {
+                id("gizliDiv").innerHTML = ar$;
+                id("Ayet").value = id("gizliDiv").innerText;
+                
+                // Demo modunda kelime kök analizi yapılabilir
+                // if (demo) {
+                //     kelimeKokAnalizi();
+                // }
+            }
+        }
+    };
+
+    // API'den veri çekme
+    xmlhttp.open("GET", "http://api.alquran.cloud/v1/surah/" + sureNo + "/ar", true);
+    xmlhttp.send();
+}
+
+function turkceOkunusBul() {
+    ayetTespit();
+    if (!sureNo) {
+        alert("Ayet referansı belirtmediniz.");
+        window.location = "#sureAdi";
+        id("sureAdi").focus();
+        return false;
+    }
+
+    baslikNo = 1;
+    let Ayet$ = id("Ayet").value;
+    Ayet$ = ayetlereBol(Ayet$);
+
+    Ayet$ = Ayet$.map((ayet, index) => {
+        id("gizliDiv").innerText = ayet;
+        return id("gizliDiv").innerText;
+    });
+
+    if (!Ayet$[Ayet$.length - 1]) {
+        Ayet$ = Ayet$.slice(0, -1);
+    }
+
+    const xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+            const parts = []; // HTML parçalarını tutmak için bir dizi oluştur
+
+            parts.push("<h2>Üstteki Ayetlerin Okunuşları</h2>");
+            parts.push("<h3>A. Muhammed Abay Transliterasyonu</h3>");
+            parts.push(`<p class='onBilgi'>bknz. <a target='_blank' style='color:#000' href='http://api.alquran.cloud/v1/surah/${sureNo}/editions/tr.transliteration'>http://api.alquran.cloud</a></p>`);
+            parts.push("<p>");
+
+            const myObj = JSON.parse(this.responseText);
+            for (let i = bas - 1; i <= son - 1; i++) {
+                parts.push(`<b>(${i + 1})</b> ${myObj["data"][0]["ayahs"][i].text} `);
+            }
+            parts.push("</p>");
+
+            parts.push("<h3>B. Acikkuran API Transliterasyonu</h3>");
+            parts.push(`<p class='onBilgi'>bknz. <a target='_blank' style='color:#000' href='https://api.acikkuran.com/surah/${sureNo}'>https://api.acikkuran.com</a></p>`);
+            parts.push("<p id='acikKuran'></p>");
+
+            parts.push("<h3>C. Mehmet Akif Ardıç <span style='color:blue'>Script.IO</span> Transliterasyonu</h3>");
+            parts.push("<p class='onBilgi'><b>Mehmet Akif Ardıç</b> tarafından yazılan <b>Script.IO</b>, bir ayetin okunuşunu otomatik olarak bulmaya çalışan bir javascript fonksiyonudur. <b>Bu fonksiyon, henüz kusurludur ve tamamlanmamıştır.</b></p>");
+            parts.push("<p>");
+
+            Ayet$.forEach((ayet, index) => {
+                const okunus$ = okunusRutus(ayet);
+                parts.push(`<b>(${bas + index})</b> ${okunus$}. `);
+            });
+            parts.push("</p>");
+
+            parts.push("<h3>D. İngilizce Transliterasyon</h3>");
+            parts.push(`<p class='onBilgi'>bknz. <a target='_blank' style='color:#000' href='http://api.alquran.cloud/v1/surah/${sureNo}/editions/en.transliteration'>http://api.alquran.cloud</a></p>`);
+            parts.push("<p>");
+
+            for (let i = bas - 1; i <= son - 1; i++) {
+                parts.push(`<b>(${i + 1})</b> ${myObj["data"][1]["ayahs"][i].text} `);
+            }
+            parts.push("</p>");
+
+            const xmlhttp2 = new XMLHttpRequest();
+            xmlhttp2.onreadystatechange = function() {
+                if (this.readyState === 4 && this.status === 200) {
+                    const myObj2 = JSON.parse(this.responseText);
+                    let acikKuranHTML = "";
+
+                    for (let i = bas - 1; i <= son - 1; i++) {
+                        acikKuranHTML += `<b>(${i + 1})</b> ${myObj2["data"]["verses"][i].transcription} `;
+                    }
+
+                    id("sonucAlani").innerHTML = parts.join(""); // Parçaları birleştirerek sonucu ayarlıyoruz
+                    id("acikKuran").innerHTML = acikKuranHTML;
+                    id("sonucAlani").style.display = "block";
+                    window.location = "#sonucAlani";
+                }
+            };
+
+            xmlhttp2.open("GET", `https://api.acikkuran.com/surah/${sureNo}`, true);
+            xmlhttp2.send();
+        }
+    };
+
+    xmlhttp.open("GET", `http://api.alquran.cloud/v1/surah/${sureNo}/editions/tr.transliteration,en.transliteration`, true);
+    xmlhttp.send();
+	}
+
+function tecvitliDinle() {
+    ayetTespit();
+    if (!sureNo) {
+        alert("Ayet referansı belirtmediniz.");
+        window.location = "#sureAdi";
+        id("sureAdi").focus();
+        return false;
+    }
+
+    const xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            const myObj = JSON.parse(this.responseText);
+            const Ayet$ = ayetlereBol(id("Ayet").value);
+            const parts = []; // HTML parçalarını tutmak için bir dizi oluştur
+
+            parts.push("<h2>Üstteki Ayetleri Tecvitli Dinle</h2>");
+
+            const hafizlar = myObj["data"].map(item => item["englishName"] + "·" + item["identifier"]);
+            hafizlar.sort();
+
+            parts.push("<table class='ayarlarMenusu' cellpadding='3'>");
+            parts.push("<tr><td>Sure Adı</td><td>:</td><td>" + (sureler[sureNo - 1].name).split("·")[0] + " Suresi</td></tr>");
+            parts.push("<tr><td>Hâfız</td><td>:</td><td><select id='Hafiz'>");
+
+            hafizlar.forEach(hafiz => {
+                const [name, identifier] = hafiz.split("·");
+                parts.push(`<option value='${identifier}'>${name}</option>`);
+            });
+
+            parts.push("</select></td></tr>");
+            parts.push("<tr><td>Başlangıç</td><td>:</td><td><select id='Bas'>");
+
+            for (let i = bas; i <= son; i++) {
+                parts.push(`<option value='${i}'>${i}. Ayet</option>`);
+            }
+
+            parts.push("</select></td></tr>");
+            parts.push("<tr><td>Bitiş</td><td>:</td><td><select id='Son'>");
+
+            for (let i = bas; i <= son; i++) {
+                parts.push(`<option value='${i}'>${i}. Ayet</option>`);
+            }
+
+            parts.push("</select></td></tr>");
+            parts.push("</table>");
+            parts.push("<p><button class='buton' onclick='yeniKiraat()'><span>Yukarıdaki ayarlarla yeni bir</span><br>Kıraat Başlat</button></p>");
+            parts.push("<div id='kiraatAlani'></div>");
+
+            id("sonucAlani").innerHTML = parts.join(""); // Parçaları birleştirerek sonucu ayarlıyoruz
+            id("sonucAlani").style.display = "block";
+            window.location = "#sonucAlani";
+
+            id("Son").selectedIndex = (son - bas);
+        }
+    };
+
+    xmlhttp.open("GET", "http://api.alquran.cloud/v1/edition?format=audio&language=ar&type=versebyverse", true);
+    xmlhttp.send();
+}
+
+
+function yeniKiraat() {
+    const parts = []; // HTML parçalarını tutacak dizi
+
+    parts.push("<div id='MP3'></div><br>");
+    parts.push("<div id='Anlam'></div>");
+    parts.push("<div id='Kuran'><div id='KuranText'></div></div></div><br>");
+
+    id("kiraatAlani").innerHTML = parts.join(""); // HTML parçalarını birleştir
+
+    let bas = parseInt(id("Bas").value);
+    let son = parseInt(id("Son").value);
+    
+    if (bas > son) {
+        bas = son;
+        son = parseInt(id("Bas").value);
+    }
+
+    okumaSirasi = bas;
+    const ayetParts = []; // Ayetleri tutacak dizi
+
+    for (let i = bas; i <= son; i++) {
+        ayetParts.push(`<div id='Ayet${i}' onclick='ayetDegistir(this)'><img src='http://cdn.islamic.network/quran/images/high-resolution/${sureNo}_${i}.png' width='100%'></div>`);
+    }
+
+    id("KuranText").innerHTML = ayetParts.join(""); // Ayet parçalarını birleştir
+
+    hafizReset();
+	}
+
+function getOffset(el) {
+	const rect = el.getBoundingClientRect();
+	return {
+		left: rect.left + window.scrollX,
+		top: rect.top + window.scrollY
+		};
+	}
+
+function hafizReset() {
+    const audioElement = id("aMP3");
+    
+    if (audioElement) {
+        audioElement.pause();
+    }
+
+    const xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            const myObj = JSON.parse(this.responseText);
+            mp3ler = myObj["data"]["ayahs"];
+            ayetVeMp3Getir();
+        }
+    };
+
+    const hafizValue = id("Hafiz").value; // Hafız değerini bir değişkende sakla
+    xmlhttp.open("GET", `https://api.alquran.cloud/v1/surah/${sureNo}/${hafizValue}`, true);
+    xmlhttp.send();
+	}
+
+function ayetVeMp3Getir() {
+    const xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+            const myObj = JSON.parse(this.responseText);
+            const translationText = myObj["data"]["translation"].text;
+            const anlamElement = id("Anlam");
+
+            // Font boyutunu belirle
+            if (translationText.length > 600) {
+                anlamElement.style.fontSize = "16px";
+            } else if (translationText.length > 350) {
+                anlamElement.style.fontSize = "23px";
+            } else {
+                anlamElement.style.fontSize = "30px";
+            }
+
+            anlamElement.innerHTML = translationText;
+        }
+    };
+
+    xmlhttp.open("GET", `https://api.acikkuran.com/surah/${sureNo}/verse/${okumaSirasi}?author=19`, true);
+    xmlhttp.send();
+
+    // Aktif ayeti güncelle
+    const eski = document.getElementsByClassName("Aktif");
+    if (eski.length > 0) {
+        eski[0].classList.remove("Aktif");
+    }
+
+    const aNo = okumaSirasi;
+    const bNo = Math.max(aNo - 1, 1);
+    const Aktif$ = id(`Ayet${aNo}`);
+
+    Aktif$.className = "Aktif";
+    Aktif$.scrollIntoView();
+
+    // Sesli okuma alanını güncelle
+    id("MP3").innerHTML = `<audio id='aMP3' controls autoplay muted='false'><source src='${mp3ler[aNo - 1].audio}' type='audio/mpeg'></audio>`;
+
+    const audioElement = id("aMP3");
+
+    audioElement.onplay = function() {
+        this.muted = false;
+    };
+
+    audioElement.onended = function() {
+        if (okumaSirasi < son) {
+            okumaSirasi++;
+            ayetVeMp3Getir();
+ 	       }
+ 	   };
+	}
+
+
+function ayetDegistir(yeniAyet){
+	okumaSirasi=yeniAyet.id.replace(/Ayet/,"")
+	ayetVeMp3Getir()
+	}
+
+function ayetAlaniniTemizle(){
+	id("sureAdi").value=""
+	id("Ayet").value=""
+	id("sureAdi").focus()
+	}
+
+function kelimeKokAnalizi() {
+    ayetTespit();
+    
+    if (!sureNo) {
+        alert("Ayet referansı belirtmediniz.");
+        window.location = "#sureAdi";
+        id("sureAdi").focus();
+        return false;
+    }
+    
+    okumaSirasi = bas;
+
+    let content = "<h2>Üstteki Ayetlerin Kelime/Kök Analizi</h2>";
+    content += "<p><span class='fa fa-cog fa-spin icon' style='font-size:24px'></span> Bu işlem biraz zaman alabilir... Lütfen bekleyin!</p>";
+    content += `<p class='loading'>${sureler[sureNo - 1].name.split("·")[0]} sûresi <b id='kacinciAyet'>${bas}</b>. âyet analiz ediliyor</p>`;
+
+    id("sonucAlani").innerHTML = content;
+    id("sonucAlani").style.display = "block";
+    window.location = "#sonucAlani";
+    
+    kokGetir();
+}
+
+function kokGetir() {
+    const xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            const myObj = JSON.parse(this.responseText);
+            let content = `<h3>${sureler[sureNo - 1].name.split("·")[0]} Suresi ${okumaSirasi}. Ayet</h3>`;
+            content += "<table class='analiz' border='0' cellpadding='5'><tr><td>Kelime Öbeği</td><td>Transkripsiyon</td><td>Çeviri</td><td>Kelime Kökü</td><td>Latin Harfleriyle</td></tr>";
+
+            myObj.data.forEach(data => {
+                const latinRoot = data.root ? data.root.latin.replace(/x/g, "ẖ")
+                                                .replace(/q/g, "g")
+                                                .replace(/w/g, "v")
+                                                .replace(/j/g, "c")
+                                                .replace(/p/g, "z")
+                                                .replace(/[$]/g, "ş")
+                                                .toUpperCase() : '';
+
+                content += `<tr>
+                                <td class='Arapca' style='font-size:24px'>${data.arabic}</td>
+                                <td>${data.transcription}</td>
+                                <td>${data.turkish}</td>
+                                <td>${data.root ? `<a target='_blank' href='https://en.wiktionary.org/wiki/${data.root.arabic}' class='Arapca' style='color:blue;text-shadow: 0 1px 0 #fff !important;'>${data.root.arabic}</a>` : '&nbsp;'}</td>
+                                <td>${data.root ? latinRoot : '&nbsp;'}</td>
+                            </tr>`;
+            });
+
+            content += "</table><br>";
+
+            if (okumaSirasi === son) {
+                id("sonucAlani").innerHTML = content;
+                window.location = "#sonucAlani";
+            } else {
+                okumaSirasi++;
+                id("kacinciAyet").innerHTML = okumaSirasi;
+                kokGetir();
+            }
+        }
+    };
+
+    xmlhttp.open("GET", `https://api.acikkuran.com/surah/${sureNo}/verse/${okumaSirasi}/words`, true);
+    xmlhttp.send();
+}
+
+function acikKuranDatabase() {
+    const akd = acikKuran[acikKuranSira].split("·");
+    const xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+            const myObj = JSON.parse(this.responseText);
+            let m2 = "";
+            let son$ = "";
+
+            for (let i = bas - 1; i < son; i++) {
+                let ilk$ = myObj["data"]["verses"][i]["translation"].text + " ";
+                
+                if (ilk$ !== son$) {
+                    ilk$ = ilk$.replace(/[']/g, "’");
+                    m2 += `<b>(${i + 1})</b> ${ilk$}`;
+
+                    const footnotes = myObj["data"]["verses"][i]["translation"].footnotes;
+
+                    if (footnotes) {
+                        footnotes.forEach(note => {
+                            if (note.text.length) {
+                                notlar.push(note.text);
+                            }
+                        });
+                    }
+                }
+                son$ = ilk$;
+            }
+
+            mealler.push(`${akd[0]}·${m2}`);
+            acikKuranSira++;
+
+            if (acikKuranSira === acikKuran.length) {
+                mealDokum(mealler);
+            } else {
+                acikKuranDatabase();
+            }
+        }
+    };
+
+    xmlhttp.open("GET", `https://api.acikkuran.com/surah/${sureNo}?author=${akd[1]}`, true);
+    xmlhttp.send();
+}
+function mealDokum(meals) {
+    meals.sort((a, b) => a.localeCompare(b));
+
+    let content = "<h2>Üstteki Ayetlerin Anlamları</h2>";
+
+    meals.forEach((meal, index) => {
+        const mealParts = meal.split("·");
+        content += `<h3>${index + 1}. ${mealParts[0]}</h3>`;
+        content += `<p>${mealParts[1]}</p>`;
+    });
+
+    if (notlar.length > 0) {
+        content += "<h3>Dipnotlar</h3><p class='onBilgi'>";
+
+        notlar.forEach((not, k) => {
+            content += `[${k + 1}] ${not}`;
+            if (k < notlar.length - 1) content += "<br><br>";
+        });
+
+        content += "</p>";
+    }
+
+    id("sonucAlani").innerHTML = content;
+    id("sonucAlani").style.display = "block";
+    window.location = "#sonucAlani";
+}
+
+
+baslangic()</script></body></html>
