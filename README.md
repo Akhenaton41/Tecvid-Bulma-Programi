@@ -40,5 +40,6 @@ Proje statik bir yapıya sahip olduğu için herhangi bir kurulum gerektirmez:
 
 Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır. Kodu özgürce kullanabilir, geliştirebilir ve paylaşabilirsiniz.
 
----
 **Geliştirici:** Mehmet Akif Ardıç (Akhenaton)
+
+Demo: <a href="https://akhenaton41.github.io/Tecvid-Bulma-Programi/" target="_blank">https://akhenaton41.github.io/Tecvid-Bulma-Programi/</a>
